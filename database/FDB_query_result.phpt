@@ -30,17 +30,17 @@ foreach ($result->asObject() as $row => $data) {
 	var_dump($row, $data);
 }
 ?>
---EXPECT--
+--EXPECTF--
 int(2)
 int(0)
-object(stdClass)#1 (2) {
+object(stdClass)#%d (2) {
   ["val1"]=>
   string(1) "1"
   ["val2"]=>
   string(1) "2"
 }
 int(1)
-object(stdClass)#4 (2) {
+object(stdClass)#%d (2) {
   ["val1"]=>
   string(1) "3"
   ["val2"]=>
@@ -75,14 +75,14 @@ array(2) {
   string(1) "4"
 }
 int(0)
-object(stdClass)#4 (2) {
+object(stdClass)#%d (2) {
   ["val1"]=>
   string(1) "1"
   ["val2"]=>
   string(1) "2"
 }
 int(1)
-object(stdClass)#1 (2) {
+object(stdClass)#%d (2) {
   ["val1"]=>
   string(1) "3"
   ["val2"]=>
