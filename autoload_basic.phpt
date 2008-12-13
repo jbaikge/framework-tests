@@ -2,7 +2,7 @@
 Ensure __autoload() works with namespaces.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../load.php');
+require(dirname(__FILE__) . '/../code/load.php');
 var_dump(class_exists('FStringCycle'));
 $cycle = new FStringCycle('one', 'two');
 var_dump((string)$cycle, "$cycle");

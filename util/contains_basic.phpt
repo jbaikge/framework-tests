@@ -2,8 +2,7 @@
 Ensure String::contains() works.
 --FILE--
 <?php
-require_once(dirname(__DIR__) . '/String.php');
-use Core::Util::String;
+require(dirname(__FILE__) . '/../../code/load.php');
 
 $haystack = "Lorem ipsum dolor sit amet";
 $good_needle = "Lorem";
@@ -33,12 +32,12 @@ $insensitive = array(
 echo "Case-Sensitive Tests\n";
 foreach ($sensitive as $desc => $args) {
 	echo "    $desc: ";
-	var_dump(String::contains($args[0], $args[1]));
+	var_dump(FString::contains($args[0], $args[1]));
 }
 echo "Case-Insensitive Tests\n";
 foreach ($insensitive as $desc => $args) {
 	echo "    $desc: ";
-	var_dump(String::contains($args[0], $args[1], true));
+	var_dump(FString::contains($args[0], $args[1], true));
 }
 ?>
 --EXPECT--
