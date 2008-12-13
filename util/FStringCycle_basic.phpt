@@ -2,7 +2,7 @@
 Ensure Cycle works
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../../code/load.php');
+require('codeloader.php');
 
 $cycle_alternate;
 $cycle_triple;

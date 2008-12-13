@@ -2,7 +2,7 @@
 Ensure String::contains() works.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../../code/load.php');
+require('codeloader.php');
 
 $haystack = "Lorem ipsum dolor sit amet";
 $good_needle = "Lorem";
