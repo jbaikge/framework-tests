@@ -3,7 +3,8 @@ $single_config = array(
 	'database.host' => 'localhost',
 	'database.user' => 'root',
 	'database.pass' => '',
-	'database.name' => 'test'
+	'database.name' => 'test',
+	'database.definition' => dirname(__FILE__) . '/test.sql'
 );
 $master_slave_config = array(
 	'database.master_host' => 'localhost',
@@ -12,5 +13,6 @@ $master_slave_config = array(
 	'database.slave_host' => 'localhost',
 	'database.slave_user' => 'root',
 	'database.slave_pass' => '',
-	'database.name' => 'test'
+	'database.name' => 'test',
+	'database.definition' => dirname(__FILE__) . '/test.sql'
 );
