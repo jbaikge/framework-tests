@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `aardvarks`
+--
+
+DROP TABLE IF EXISTS `aardvarks`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `aardvarks` (
+  `aardvark_id` bigint(20) unsigned NOT NULL auto_increment,
+  `inno2_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY  (`aardvark_id`),
+  UNIQUE KEY `aardvark_id` (`aardvark_id`),
+  KEY `inno2_id` (`inno2_id`),
+  CONSTRAINT `aardvarks_ibfk_1` FOREIGN KEY (`inno2_id`) REFERENCES `inno2` (`inno2_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `aardvarks`
+--
+
+LOCK TABLES `aardvarks` WRITE;
+/*!40000 ALTER TABLE `aardvarks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `aardvarks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `inno1`
 --
 
@@ -102,4 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2008-12-14 19:53:44
+-- Dump completed on 2008-12-15 13:43:13
