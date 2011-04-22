@@ -4,6 +4,6 @@ Ensure FDB::connect() works.
 <?php
 require('codeloader.php');
 require('config.php'); // Defines $single_config and $master_slave_config
-FDB::connect($config);
+FDB::connect($single_config);
 ?>
 --EXPECT--

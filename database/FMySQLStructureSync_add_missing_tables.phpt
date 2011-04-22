@@ -33,6 +33,5 @@ var_dump($sync->addMissingTables());
 --EXPECT--
 int(6)
 int(0)
-Cannot delete or update a parent row: a foreign key constraint fails
-int(0)
+Cannot delete or update a parent row: a foreign key constraint fails<br>int(0)
 int(3)
