@@ -2,7 +2,7 @@
 Ensure FTemplate::fetchCached() works.
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
 var_dump(FTemplate::fetchCached('templates/test.html.php'));
 

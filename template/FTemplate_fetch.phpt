@@ -2,7 +2,7 @@
 Ensure FTemplate::fetch() works.
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
 var_dump(FTemplate::fetch('templates/test.html.php'));
 

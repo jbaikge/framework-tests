@@ -2,23 +2,27 @@
 Verify FTemplate::fetchCached() is faster than FTemplate::fetch().
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
-var_dump(filesize('templates/fetched.html.php') == filesize('templates/cached.html.php'));
+$test_path = dirname(__FILE__) . '/templates/test.html.php';
+$cached_path = dirname(__FILE__) . '/templates/cached.html.php';
+$fetched_path = dirname(__FILE__) . '/templates/fetched.html.php';
+
+var_dump(filesize($cached_path) == filesize($fetched_path));
 
 // Ensure the FTemplate class has been loaded.
-FTemplate::fetch('templates/test.html.php');
+FTemplate::fetch($test_path);
 
 $fetch_start = microtime(true);
 for ($i = 0; $i < 1000; $i++) {
-	FTemplate::fetch('templates/fetched.html.php');
+	FTemplate::fetch($fetched_path);
 }
 $fetch_duration = microtime(true) - $fetch_start;
 unset($fetch_start);
 
 $cache_start = microtime(true);
 for ($i = 0; $i < 1000; $i++) {
-	FTemplate::fetchCached('templates/cached.html.php');
+	FTemplate::fetchCached($cached_path);
 }
 $cache_duration = microtime(true) - $cache_start;
 unset($cache_start);
