@@ -2,8 +2,11 @@
 Ensure FDB::connect() works.
 --FILE--
 <?php
-require('codeloader.php');
-require('config.php'); // Defines $single_config and $master_slave_config
-FDB::connect($single_config);
+define('DATABASE', 'single');
+$config['database.auto_connect'] = false;
+
+require(dirname(__FILE__) . '/../webroot.conf.php');
+
+FDB::connect();
 ?>
 --EXPECT--

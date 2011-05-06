@@ -2,11 +2,8 @@
 Ensure the result returned from FDB::query()->asCSV() works.
 --FILE--
 <?php
-require('codeloader.php');
-require('config.php'); // Provides $single_config and $master_slave_config
-
-FDB::connect($single_config);
-
+define('DATABASE', 'single');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 $result = FDB::query('SELECT 1 AS val1, 2 AS val2 UNION SELECT 3, 4');
 var_dump($result->num_rows);
 

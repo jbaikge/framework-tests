@@ -2,10 +2,8 @@
 Retrieve processed query.
 --FILE--
 <?php
-require('codeloader.php');
-require('config.php'); // Provides $single_config and $master_slave_config
-
-FDB::connect($single_config);
+define('DATABASE', 'single');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
 var_dump(FDB::sql('SELECT 1 = %d', 1));
 var_dump(FDB::query('SELECT 1 = %d', 1)->getSQL());

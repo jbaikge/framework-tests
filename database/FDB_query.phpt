@@ -2,16 +2,8 @@
 Ensure FDB::query() works.
 --FILE--
 <?php
-require('codeloader.php');
-require('config.php'); // Provides $single_config and $master_slave_config
-
-try {
-	FDB::query('SELECT 1');
-} catch (Exception $e) {
-	var_dump($e->getMessage());
-}
-
-FDB::connect($single_config);
+define('DATABASE', 'single');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
 var_dump(get_class(FDB::query('SELECT 1')));
 
@@ -28,7 +20,6 @@ var_dump(get_class(FDB::slave('SELECT 1 = %d', 1)));
 var_dump(get_class(FDB::master('SELECT 1 = %d', 1)));
 ?>
 --EXPECT--
-string(68) "Cannot find link to database. Are you sure you ran `FDB::connect()'?"
 string(13) "FMySQLiResult"
 string(15) "Query was empty"
 string(13) "FMySQLiResult"
