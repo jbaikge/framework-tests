@@ -2,7 +2,7 @@
 Ensure Cycle works
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
 $cycle_alternate;
 $cycle_triple;

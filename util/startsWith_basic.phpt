@@ -2,7 +2,7 @@
 Ensure String::startsWith() works
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 
 $str = 'Lorem ipsum';
 $upper_str = strtoupper($str);

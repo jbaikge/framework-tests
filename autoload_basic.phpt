@@ -2,7 +2,7 @@
 Ensure __autoload() works with namespaces.
 --FILE--
 <?php
-require('codeloader.php');
+require('webroot.conf.php');
 var_dump(class_exists('FStringCycle'));
 $cycle = new FStringCycle('one', 'two');
 var_dump((string)$cycle, "$cycle");
