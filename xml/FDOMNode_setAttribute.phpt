@@ -2,7 +2,7 @@
 Testing attributes on the root node.
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 $dom = new FDOMDocument();
 $dom->rootNode('root-node')->setAttribute('attr', 'test');
 var_dump($dom->asXML(), $dom->asHTML());

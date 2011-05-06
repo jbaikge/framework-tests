@@ -2,7 +2,7 @@
 Testing content placement within a node while dynamically appending the node to the DOM.
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 $dom = new FDOMDocument();
 $dom->rootNode('rootNode', 'content')->subnode('here is more content with a tag: <myTag/>');
 var_dump($dom->asXML(),$dom->asHTML());

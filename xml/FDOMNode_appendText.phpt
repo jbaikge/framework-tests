@@ -2,7 +2,7 @@
 Ensuring FDOMNode::appendText() works.
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 $dom = new FDOMDocument();
 $root = $dom->rootNode('root-node', 'Initial text. ');
 $root->b('Some HTML bold text. ');

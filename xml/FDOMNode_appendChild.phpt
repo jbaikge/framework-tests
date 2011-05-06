@@ -2,7 +2,7 @@
 Explicit test of FDOMNode::appendChild().
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 $dom = new FDOMDocument();
 $root = $dom->rootNode('root-node');
 $root->appendChild('sub-node');

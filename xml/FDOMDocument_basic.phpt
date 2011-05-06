@@ -2,7 +2,7 @@
 Ensuring basic functionality of FDOMDocument
 --FILE--
 <?php
-require('codeloader.php');
+require(dirname(__FILE__) . '/../webroot.conf.php');
 $dom = new FDOMDocument;
 var_dump($dom->asXML(), $dom->asHTML());
 $dom = new FDOMDocument(1.1);
