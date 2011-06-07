@@ -1,5 +1,5 @@
 --TEST--
-Ensure FModelManager::form() returns combined options defined globally and for forms.
+Ensure FModelManager::form() returns stacked options.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');

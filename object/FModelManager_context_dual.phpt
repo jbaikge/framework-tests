@@ -1,5 +1,5 @@
 --TEST--
-Ensure FModelManager::storage_xml() returns combined options defined globally, for storage, and for storage_xml.
+Ensure FModelManager::storage_xml() returns stacked options.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
