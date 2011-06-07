@@ -12,7 +12,7 @@ $object = unserialize('C:8:"MyObject":37:{{"int":4,"string":"hi","array":[1,2]}}
 var_dump($object->getData());
 ?>
 --EXPECT--
-array (3) {
+array(3) {
   ["int"]=>
   int(4)
   ["string"]=>
