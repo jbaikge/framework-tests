@@ -1,5 +1,9 @@
 --TEST--
 Ensure the result returned from FDB::query()->asCSV() works.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
 define('DATABASE', 'single');

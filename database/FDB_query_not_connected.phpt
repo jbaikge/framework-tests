@@ -1,5 +1,9 @@
 --TEST--
 Ensure FDB::query() fails when there is no connection.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');

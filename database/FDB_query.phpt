@@ -1,5 +1,9 @@
 --TEST--
 Ensure FDB::query() works.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
 define('DATABASE', 'single');

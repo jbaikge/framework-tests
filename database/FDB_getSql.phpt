@@ -1,5 +1,9 @@
 --TEST--
 Retrieve processed query.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
 define('DATABASE', 'single');
