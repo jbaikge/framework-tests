@@ -24,7 +24,7 @@ switch (DATABASE) {
 		break;
 }
 
-if ($config['database.auto_connect']) {
+if (array_key_exists('database.auto_connect', $config) && $config['database.auto_connect']) {
 	if (DATABASE == 'single') {
 		mysql_connect($config['database.host'], $config['database.user'], $config['database.pass']);
 	} else {
