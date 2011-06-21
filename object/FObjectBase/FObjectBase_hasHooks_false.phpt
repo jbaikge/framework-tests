@@ -1,5 +1,5 @@
 --TEST--
-Ensure an attached driver hook exists on an FObject.
+Ensure a driver hook doesn't exist on an FObject.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
@@ -18,7 +18,7 @@ class MyClass extends FObject implements MyHook {
 }
 
 $object = new MyClass;
-var_dump($object->hasHooks('Foo'));
+var_dump($object->hasHooks('Bar'));
 ?>
 --EXPECT--
-bool(true)
+bool(false)
