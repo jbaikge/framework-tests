@@ -2,7 +2,7 @@
 Ensure FObjectQueryFrom returns single attribute join when preview mode is off.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $from = new FObjectQueryFrom('monkey');
 $from->add('hands', array());

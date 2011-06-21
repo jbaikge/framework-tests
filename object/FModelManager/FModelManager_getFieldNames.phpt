@@ -2,8 +2,8 @@
 Ensure FModelManager::getFieldNames() returns correct values.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
-require(dirname(__FILE__) . '/definition.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
+require(dirname(__FILE__) . '/../definition.php');
 
 $model = new FModelManager($definition);
 var_dump($model->getFieldNames());

@@ -2,7 +2,7 @@
 Ensure FObjectDriver::$subject is an object reference.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 class MyDriver extends FObjectDriver {
 	public function modify () {

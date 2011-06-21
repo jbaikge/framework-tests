@@ -2,7 +2,7 @@
 Ensure an attached driver private method does not exist on an FObject.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 interface MyMethod {}
 

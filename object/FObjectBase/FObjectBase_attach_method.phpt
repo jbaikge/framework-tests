@@ -2,7 +2,7 @@
 Attach driver methods to an FObject.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 interface MyMethod {}
 

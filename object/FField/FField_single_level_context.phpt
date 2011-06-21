@@ -2,7 +2,7 @@
 Build top-level contexts
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $field = FField::make('test')
 	->global_value('global value')

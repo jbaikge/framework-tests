@@ -2,7 +2,7 @@
 Ensure FObject::__construct() works
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 class MyObject extends FObject {
 	public static function getModel() {}

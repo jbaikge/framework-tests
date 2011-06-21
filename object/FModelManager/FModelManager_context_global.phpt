@@ -2,8 +2,8 @@
 Ensure FModelManager::global() returns only globally defined options.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
-require(dirname(__FILE__) . '/definition.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
+require(dirname(__FILE__) . '/../definition.php');
 
 $model = new FModelManager($definition);
 var_dump($model->global());

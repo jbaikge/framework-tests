@@ -2,7 +2,7 @@
 Ensure FObject::getModel() requires a definition.
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 class MyObject extends FObject {}
 ?>
