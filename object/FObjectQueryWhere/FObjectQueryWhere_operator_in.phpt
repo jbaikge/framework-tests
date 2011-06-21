@@ -2,7 +2,7 @@
 Ensure in operator works.
 --SKIPIF--
 <?php
-//require(dirname(__FILE__) . '/../../database/skipif.php');
+require(dirname(__FILE__) . '/../../database/skipif.php');
 ?>
 --FILE--
 <?php
