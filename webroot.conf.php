@@ -36,6 +36,8 @@ if (array_key_exists('database.auto_connect', $config) && $config['database.auto
 
 $config['library.dir'] = dirname(dirname(__FILE__));
 $config['cache.dir'] = '/tmp/framework-cache';
+$config['templates.form.dir'] = $config['library.dir'] . '/form/templates';
+$config['templates.form.field.dir'] = $config['library.dir'] . '/form/field/templates';
 
 // Make anything that might be missing
 if (!is_dir($config['cache.dir'])) {
