@@ -1,5 +1,5 @@
 --TEST--
-Ensure FCalendar::compare() works for the start dates.
+Ensure FCalendar::compare() works for the end dates.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
@@ -26,13 +26,13 @@ $calendar = new FCalendar();
 foreach ($dates as $date) {
 	$calendar->insert(FCalendarEvent::newInstance()
 		->setCreated('now')
-		->setStart($date)
-		->setDuration('P15M')
+		->setStart(0) // Jan 1, 1970
+		->setEnd($date)
 	);
 }
 
 foreach ($calendar as $event) {
-	printf("%s\n", $event->getStart()->format('c'));
+	printf("%s\n", $event->getEnd()->format('c'));
 }
 ?>
 --EXPECT--
