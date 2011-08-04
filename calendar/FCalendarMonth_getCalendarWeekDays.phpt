@@ -1,10 +1,10 @@
 --TEST--
-Ensure FCalendarMonth::getCalendarWeekDays() fetches an array of weeks with 7 FCalendarDay objects within each week.
+Ensure FCalendarMonth::getCalendarWeeks() fetches an array of weeks with 7 FCalendarDay objects within each week.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
 $month = new FCalendarMonth('Aug', 2011);
-foreach ($month->getCalendarWeekDays() as $week) {
+foreach ($month->getCalendarWeeks() as $week) {
 	foreach ($week as $day) {
 		printf('%3d', $day->getDate()->format('d'));
 	}
