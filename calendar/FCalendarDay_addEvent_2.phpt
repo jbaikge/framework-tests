@@ -1,5 +1,5 @@
 --TEST--
-Ensure FCalendarDay::addEvent() adds 1 event.
+Ensure FCalendarDay::addEvent() adds 2 events.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
@@ -9,11 +9,17 @@ $day->addEvent(FCalendarEvent::newInstance()
 	->setStart('Aug 1, 2011 11:00:00')
 	->setDuration('2 hours')
 );
+$day->addEvent(FCalendarEvent::newInstance()
+	->setCreated('now')
+	->setStart('Aug 1, 2011 15:00:00')
+	->setDuration('2 hours')
+);
 var_dump(count($day));
 foreach ($day as $event) {
 	echo $event->getStart()->format('c') . PHP_EOL;
 }
 ?>
 --EXPECT--
-int(1)
+int(2)
 2011-08-01T11:00:00-04:00
+2011-08-01T15:00:00-04:00
