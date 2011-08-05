@@ -38,6 +38,7 @@ $config['library.dir'] = dirname(dirname(__FILE__));
 $config['cache.dir'] = '/tmp/framework-cache';
 $config['templates.form.dir'] = $config['library.dir'] . '/form/templates';
 $config['templates.form.field.dir'] = $config['library.dir'] . '/form/field/templates';
+$config['templates.calendar.dir'] = $config['library.dir'] . '/calendar/templates';
 
 // Make anything that might be missing
 if (!is_dir($config['cache.dir'])) {
