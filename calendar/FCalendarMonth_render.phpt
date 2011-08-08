@@ -5,12 +5,6 @@ Ensure templates are used properly during rendering.
 require(dirname(__FILE__) . '/../webroot.conf.php');
 $month = new FCalendarMonth('Aug', 2011);
 
-$month->insert(FCalendarEvent::newInstance()
-	->setCreated('now')
-	->setStart('Aug 5, 2011 11:00:00')
-	->setDuration('15 minutes')
-);
-
 echo FTemplate::fetch($month->getTemplate(), array('month' => &$month));
 ?>
 --EXPECT--
@@ -26,40 +20,36 @@ echo FTemplate::fetch($month->getTemplate(), array('month' => &$month));
 	</div>
 	<div class="week">
 		<div class="outer-day">
-			<div class="date">31</div>
+			<div class="date">Jul 31</div>
 		</div>
 		<div class="day">
-			<div class="date">01</div>
+			<div class="date">Aug 1</div>
 		</div>
 		<div class="day">
-			<div class="date">02</div>
+			<div class="date">2</div>
 		</div>
 		<div class="day">
-			<div class="date">03</div>
+			<div class="date">3</div>
 		</div>
 		<div class="day">
-			<div class="date">04</div>
+			<div class="date">4</div>
 		</div>
 		<div class="day">
-			<div class="date">05</div>
-				<div class="event">
-					<div class="title">EVENT</div>
-					<div class="duration">11:00 - 11:15</div>
-				</div>
+			<div class="date">5</div>
 		</div>
 		<div class="day">
-			<div class="date">06</div>
+			<div class="date">6</div>
 		</div>
 	</div>
 	<div class="week">
 		<div class="day">
-			<div class="date">07</div>
+			<div class="date">7</div>
 		</div>
 		<div class="day">
-			<div class="date">08</div>
+			<div class="date">8</div>
 		</div>
 		<div class="day">
-			<div class="date">09</div>
+			<div class="date">9</div>
 		</div>
 		<div class="day">
 			<div class="date">10</div>
@@ -131,16 +121,17 @@ echo FTemplate::fetch($month->getTemplate(), array('month' => &$month));
 			<div class="date">30</div>
 		</div>
 		<div class="day">
-			<div class="date">31</div>
+			<div class="date">Aug 31</div>
 		</div>
 		<div class="outer-day">
-			<div class="date">01</div>
+			<div class="date">Sep 1</div>
 		</div>
 		<div class="outer-day">
-			<div class="date">02</div>
+			<div class="date">2</div>
 		</div>
 		<div class="outer-day">
-			<div class="date">03</div>
+			<div class="date">3</div>
 		</div>
 	</div>
 </div>
+
