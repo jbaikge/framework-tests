@@ -1,5 +1,5 @@
 --TEST--
-Ensure FJSON decodes to an array.
+Ensure FJSON::decode() decodes to an array.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');

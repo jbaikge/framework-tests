@@ -1,5 +1,5 @@
 --TEST--
-Ensure FJSON decodes a multidimensional array.
+Ensure FJSON::decode() decodes a multidimensional array.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
