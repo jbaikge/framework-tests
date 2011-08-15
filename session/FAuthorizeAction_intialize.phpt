@@ -1,5 +1,5 @@
 --TEST--
-Ensure new instances are invalid, using new FCalendarEvent().
+Ensure FAuthorizeAction instantiates properly.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/skipif.php');
@@ -9,8 +9,10 @@ require(dirname(__FILE__) . '/skipif.php');
 // webroot is already included in the skipif. require_once prevents barfage.
 require_once(dirname(__FILE__) . '/../webroot.conf.php');
 
-$e = new FCalendarEvent();
-var_dump($e->valid() !== true);
+class TestAction implements FAuthorizeAction {}
+$test_action = new TestAction();
+var_dump($test_action);
 ?>
 --EXPECT--
-bool(true)
+object(TestAction)#1 (0) {
+}

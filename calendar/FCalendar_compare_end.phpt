@@ -1,8 +1,13 @@
 --TEST--
 Ensure FCalendar::compare() works for the end dates.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+// webroot is already included in the skipif. require_once prevents barfage.
+require_once(dirname(__FILE__) . '/../webroot.conf.php');
 
 $dates = array(
 	'1983-04-29 03:19:52',

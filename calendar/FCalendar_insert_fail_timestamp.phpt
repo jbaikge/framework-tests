@@ -1,8 +1,13 @@
 --TEST--
 Ensure FCalendar::insert() fails with a timestamp error.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+// webroot is already included in the skipif. require_once prevents barfage.
+require_once(dirname(__FILE__) . '/../webroot.conf.php');
 
 try {
 	$event = FCalendarEvent::newInstance()

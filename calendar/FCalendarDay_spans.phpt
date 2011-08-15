@@ -1,8 +1,13 @@
 --TEST--
 Ensure blank items are placed in days when multi-day events span through them.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/skipif.php');
+?>
 --FILE--
 <?php
-require(dirname(__FILE__) . '/../webroot.conf.php');
+// webroot is already included in the skipif. require_once prevents barfage.
+require_once(dirname(__FILE__) . '/../webroot.conf.php');
 
 $month = new FCalendarMonth('Aug', 2011);
 
