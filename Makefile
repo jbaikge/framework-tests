@@ -2,16 +2,20 @@
 ROOT_DIRECTORY := .
 SUBDIRS := ${shell find ${ROOT_DIRECTORY} -mindepth 1 -type d -print | grep -v .svn}
 
+.PHONY: coverage
+coverage:
+	php generate_coverage.php
+
 # Single-threaded mode (default):
 .PHONY: all
 all:
-	pear run-tests -r
+	pear run-tests --recur --coverage
+	php generate_coverage.php
 
 # Multi-threaded mode:
 .PHONY: fast
-fast: $(SUBDIRS)
+fast: $(SUBDIRS) coverage
 
 .PHONY: $(SUBDIRS)
 $(SUBDIRS):
-	pear run-tests $@
-
+	pear run-tests --coverage $@
