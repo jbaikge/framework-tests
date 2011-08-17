@@ -7,10 +7,15 @@ SUBDIRS := ${shell find ${ROOT_DIRECTORY} -mindepth 1 -type d -print | grep -v .
 all:
 	pear run-tests --recur --coverage
 	php generate_coverage.php
+	find -name '*.xdebug' | xargs rm
 
 # Multi-threaded mode:
 .PHONY: fast
-fast: $(SUBDIRS) coverage
+fast: $(SUBDIRS)
+	@echo FAILED TESTS:
+	@find -name '*.log' | sed 's/\.log/.phpt/'
+	php generate_coverage.php
+	@find -name '*.xdebug' | xargs rm
 
 .PHONY: $(SUBDIRS)
 $(SUBDIRS):
@@ -19,4 +24,5 @@ $(SUBDIRS):
 .PHONY: coverage
 coverage:
 	php generate_coverage.php
+	find -name '*.xdebug' | xargs rm
 

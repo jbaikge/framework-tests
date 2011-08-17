@@ -33,6 +33,7 @@ class CoverageCalculator {
 			);
 			self::$report[$class]['percentage'] = self::$report[$class]['executed'] / self::$report[$class]['executable'];
 		}
+		ksort(self::$report);
 	}
 	public static function toString () {
 		self::generateReport();
