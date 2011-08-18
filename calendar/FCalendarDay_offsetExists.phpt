@@ -18,18 +18,13 @@ $day[4] = FCalendarEvent::newInstance()
 	->setStart('Aug 1, 2011 15:00:00')
 	->setDuration('2 hours')
 ;
-var_dump($day->getNumEvents());
-foreach ($day as $event) {
-	if ($event) {
-		echo $event->getStart()->format('c');
-	}
-	echo PHP_EOL;
+foreach ($day as $key => $event) {
+	var_dump(isset($day[$key]));
 }
 ?>
 --EXPECT--
-int(2)
-
-2011-08-01T11:00:00-04:00
-
-
-2011-08-01T15:00:00-04:00
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+bool(true)

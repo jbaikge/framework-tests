@@ -1,5 +1,5 @@
 --TEST--
-Ensure FCalendarDay::getNumEvents() returns the number of events, not slots.
+Ensure FCalendarDay::offsetUnset() removes the event from the end and cleans up null slots.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/skipif.php');
@@ -21,15 +21,30 @@ $day[4] = FCalendarEvent::newInstance()
 var_dump($day->getNumEvents());
 foreach ($day as $event) {
 	if ($event) {
-		echo $event->getStart()->format('c');
+		var_dump($event->getStart()->format('c'));
+	} else {
+		var_dump(false);
 	}
-	echo PHP_EOL;
+}
+
+unset($day[4]);
+
+var_dump($day->getNumEvents());
+foreach ($day as $event) {
+	if ($event) {
+		var_dump($event->getStart()->format('c'));
+	} else {
+		var_dump(false);
+	}
 }
 ?>
 --EXPECT--
 int(2)
-
-2011-08-01T11:00:00-04:00
-
-
-2011-08-01T15:00:00-04:00
+bool(false)
+string(25) "2011-08-01T11:00:00-04:00"
+bool(false)
+bool(false)
+string(25) "2011-08-01T15:00:00-04:00"
+int(1)
+bool(false)
+string(25) "2011-08-01T11:00:00-04:00"
