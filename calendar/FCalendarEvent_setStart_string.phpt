@@ -1,5 +1,5 @@
 --TEST--
-Ensure start time, set with a string date, gets set as a DateTime object.
+Ensure FCalendarEvent::setDuration supports a DateInterval object as an argument.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/skipif.php');
@@ -11,7 +11,8 @@ require_once(dirname(__FILE__) . '/../webroot.conf.php');
 var_dump(
 	FCalendarEvent::newInstance()
 		->setStart('Aug 1, 2011 3pm')
-		->getStart() instanceof DateTime
+		->setDuration(new DateInterval('PT15M'))
+		->getEnd() , new DateTime('Aug 1, 2011 3:15pm')
 );
 ?>
 --EXPECT--
