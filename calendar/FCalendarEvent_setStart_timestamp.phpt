@@ -1,5 +1,5 @@
 --TEST--
-Ensure start time, set with a timestamp, gets set as a DateTime object.
+Ensure FCalendarEvent::setStart() set with a timestamp, gets set as a DateTime object.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/skipif.php');

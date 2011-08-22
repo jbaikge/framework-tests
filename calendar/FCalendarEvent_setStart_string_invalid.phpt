@@ -1,5 +1,5 @@
 --TEST--
-Ensure an exception is thrown with an invalid string time.
+Ensure FCalendarEvent::setStart() throws an exception with an invalid string time.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/skipif.php');
