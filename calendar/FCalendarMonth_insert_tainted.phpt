@@ -23,7 +23,7 @@ foreach ($month->getCalendarDays() as $day) {
 		printf("%s - %s\n", $event->getStart()->format('c'), $event->getEnd()->format('c'));
 	}
 }
-echo '--TAINT--' . PHP_EOL;
+echo 'TAINT' . PHP_EOL;
 $month->insert(FCalendarEvent::newInstance()
 	->setCreated('now')
 	->setStart('Aug 5, 2011')
@@ -39,7 +39,7 @@ foreach ($month->getCalendarDays() as $day) {
 --EXPECT--
 2011-08-05T11:00:00-04:00 - 2011-08-05T13:00:00-04:00
 2011-08-05T12:00:00-04:00 - 2011-08-05T13:00:00-04:00
---TAINT--
+TAINT
 2011-08-05T00:00:00-04:00 - 2011-08-07T23:59:59-04:00
 2011-08-05T00:00:00-04:00 - 2011-08-07T23:59:59-04:00
 2011-08-05T00:00:00-04:00 - 2011-08-07T23:59:59-04:00
