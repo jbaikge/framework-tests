@@ -1,6 +1,12 @@
 --TEST--
 Ensure FLog::message() adds messages to the internal data structure.
 --SKIPIF--
+<?php
+require(dirname(__FILE__) . '/../webroot.conf.php');
+if (!FClassCache::classExists('FLog')) {
+  print "skip FLog class not available";
+}
+?>
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');

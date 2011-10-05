@@ -1,5 +1,12 @@
 --TEST--
 Ensure FLog::set() sets a key and value properly.
+--SKIPIF--
+<?php
+require(dirname(__FILE__) . '/../webroot.conf.php');
+if (!FClassCache::classExists('FLog')) {
+  print "skip FLog class not available";
+}
+?>
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
