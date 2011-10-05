@@ -22,8 +22,8 @@ $o1 = new MyStorageObject(1);
 var_dump($o1->getData());
 
 ?>
---EXPECT--
-array(4) {
+--EXPECTF--
+array(9) {
   ["first_name"]=>
   string(4) "Test"
   ["last_name"]=>
@@ -32,4 +32,14 @@ array(4) {
   NULL
   ["salt"]=>
   NULL
+  ["id"]=>
+  string(1) "1"
+  ["parent_id"]=>
+  NULL
+  ["creator_id"]=>
+  NULL
+  ["added"]=>
+  string(19) "%d-%d-%d %d:%d:%d"
+  ["updated"]=>
+  string(19) "%d-%d-%d %d:%d:%d"
 }
