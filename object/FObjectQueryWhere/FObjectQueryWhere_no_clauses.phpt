@@ -9,10 +9,8 @@ require(dirname(__FILE__) . '/../../database/skipif.php');
 define('DATABASE', 'single');
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
-$where = new FObjectQueryWhere('monkey');
-print($where->toString());
+$where = new FObjectQueryWhere('MyWhereClass');
+var_dump((string)$where);
 ?>
 --EXPECT--
-  monkey.object_type = 'monkey'
-  AND
-  monkey.object_deleted = '0'
+string(0) ""

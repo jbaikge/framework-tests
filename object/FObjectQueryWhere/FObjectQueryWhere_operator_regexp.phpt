@@ -9,13 +9,10 @@ require(dirname(__FILE__) . '/../../database/skipif.php');
 define('DATABASE', 'single');
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
-$where = new FObjectQueryWhere('monkey');
+$where = new FObjectQueryWhere('MyWhereClass');
 $where->add('field', 'regexp', array(0));
-print($where->toString());
+var_dump((string)$where);
 ?>
 --EXPECT--
-  monkey.object_type = 'monkey'
-  AND
-  monkey.object_deleted = '0'
-  AND
-  field.attribute_value REGEXP '0'
+string(19) "  field REGEXP '0'
+"
