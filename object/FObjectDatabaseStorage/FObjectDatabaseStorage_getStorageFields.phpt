@@ -1,6 +1,9 @@
 --TEST--
-Ensure 
+Ensure an FObjectDatabaseStorage subclass can push and pull data from the database.
 --SKIPIF--
+<?php
+require(dirname(__FILE__) . '/../../database/skipif.php');
+?>
 --FILE--
 <?php
 define('DATABASE', 'single');
