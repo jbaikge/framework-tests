@@ -6,9 +6,11 @@ require(dirname(__FILE__) . '/../webroot.conf.php');
 
 FCookie::initialize();
 FCookie::set('test', 'value');
-var_dump(FCookie::get('test'));
+$pre_clear = FCookie::get('test');
 FCookie::clear();
-var_dump(FCookie::get('test'));
+$post_clear = FCookie::get('test');
+
+var_dump($pre_clear, $post_clear);
 ?>
 --EXPECT--
 string(5) "value"
