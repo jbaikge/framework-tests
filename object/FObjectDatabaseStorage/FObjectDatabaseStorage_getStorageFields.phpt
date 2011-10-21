@@ -41,8 +41,8 @@ array(9) {
   NULL
   ["creator_id"]=>
   NULL
-  ["added"]=>
-  string(19) "%d-%d-%d %d:%d:%d"
-  ["updated"]=>
-  string(19) "%d-%d-%d %d:%d:%d"
+  ["_added"]=>
+  int(%d)
+  ["_updated"]=>
+  int(%d)
 }
