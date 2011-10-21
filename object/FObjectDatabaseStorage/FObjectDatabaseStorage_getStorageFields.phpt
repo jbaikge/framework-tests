@@ -36,7 +36,7 @@ array(9) {
   ["salt"]=>
   NULL
   ["id"]=>
-  string(1) "1"
+  int(1)
   ["parent_id"]=>
   NULL
   ["creator_id"]=>
