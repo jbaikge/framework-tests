@@ -13,7 +13,7 @@ $bad_str = 'ipsum';
 
 $tests = array(
 	"'$str' starts with '$good_letter'" => array($str, $good_letter),
-	"'$str' starts with '$str'" => array($str, $good_str),
+	"'$str' starts with '$good_str'" => array($str, $good_str),
 	"'$str' does not start with '$bad_letter'" => array($str, $bad_letter),
 	"'$str' does not start with '$bad_str'" => array($str, $bad_str)
 );
@@ -24,6 +24,6 @@ foreach ($tests as $desc => $args) {
 ?>
 --EXPECT--
 'Lorem ipsum' starts with 'L': bool(true)
-'Lorem ipsum' starts with 'Lorem ipsum': bool(true)
+'Lorem ipsum' starts with 'Lore': bool(true)
 'Lorem ipsum' does not start with 'q': bool(false)
 'Lorem ipsum' does not start with 'ipsum': bool(false)
