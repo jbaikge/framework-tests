@@ -42,7 +42,7 @@ array(9) {
   ["creator_id"]=>
   NULL
   ["_added"]=>
-  int(%d)
+  string(%d) "%s"
   ["_updated"]=>
-  int(%d)
+  string(%d) "%s"
 }

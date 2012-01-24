@@ -3,13 +3,15 @@ Ensure FUploadField::getError() returns the same error as FUploadField::validate
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/skipif.php');
+if (php_sapi_name()=='cli') die ('Must be run in CGI mode');
 ?>
 --FILE--
 <?php
+define('DATABASE', 'single');
 require_once(dirname(__FILE__) . '/../../webroot.conf.php');
+include ('upload.php');
 
 $field = new FUploadField('test');
-// Specify the name in $_FILES since we are not running through FForm::load();
 $field->load('');
 list($valid, $value) = $field->validate();
 var_dump($valid, $value, $field->getError());

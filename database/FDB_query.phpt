@@ -23,9 +23,9 @@ var_dump(get_class(FDB::query('SELECT 1 = %d', 1)));
 var_dump(get_class(FDB::slave('SELECT 1 = %d', 1)));
 var_dump(get_class(FDB::master('SELECT 1 = %d', 1)));
 ?>
---EXPECT--
+--EXPECTF--
 string(13) "FMySQLiResult"
-string(15) "Query was empty"
+string(%d) "Query was empty%s"
 string(13) "FMySQLiResult"
 string(13) "FMySQLiResult"
 string(13) "FMySQLiResult"
