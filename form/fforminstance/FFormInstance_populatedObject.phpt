@@ -1,5 +1,5 @@
 --TEST--
-Ensure FFormFactory::make creates the basic object from the supplied class name.
+Ensure FFormInstance::populatedObject returns a form processable object with field changes populated.
 --POST--
 test_field=This is a test
 --FILE--

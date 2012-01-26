@@ -1,5 +1,5 @@
 --TEST--
-Ensure FFormFactory::make creates the basic object from the supplied class name.
+Ensure FFormInstance::getInnerInstance returns its child object.
 --FILE--
 <?php
 require_once(dirname(__FILE__) . '/../../webroot.conf.php');

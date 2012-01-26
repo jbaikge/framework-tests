@@ -1,5 +1,5 @@
 --TEST--
-Ensure FFormFactory::make creates the basic object from the supplied class name.
+Ensure FFormInstance::rebuildFields works.
 --POST--
 test_field=This is a test
 --FILE--
