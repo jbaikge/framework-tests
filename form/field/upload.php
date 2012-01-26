@@ -1,5 +1,10 @@
 <?php
-class Upload extends FObject implements FObjectDatabaseStorage {
+/*!
+ * Functional placeholder for FUpload. Actual FUpload class should not 
+ * implement FObjectDatabaseStorage. Storage implementations should be declared 
+ * in descendant object classes. This class is here for testing purposes only.
+ */
+class FUpload extends FObject implements FObjectDatabaseStorage {
 	/*!
 	 * Builds the model for a generic upload. We capture basic information 
 	 * including the original filename (for use later with fpassthru() or 
