@@ -1,6 +1,5 @@
 --TEST--
 Ensure FClassCache::clear resets the class cache file.
---SKIPIF--
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');

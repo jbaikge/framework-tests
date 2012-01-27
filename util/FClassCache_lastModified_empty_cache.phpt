@@ -1,10 +1,11 @@
 --TEST--
-Ensure FClassCache::lastModified returns a timestamp reflecting the last modified date of the supplied class's file.
+Ensure FClassCache::lastModified triggers the creation of the class cache if the file doesn't already exist.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
+// Clear the cache
+FClassCache::clear();
 // Trigger the class_cache to load.
-$dummy_load = new FCalendarDay(new DateTime());
 var_dump(FClassCache::lastModified ('FCalendarDay'));
 // Clear the cache so the next test has a clean start
 FClassCache::clear();
