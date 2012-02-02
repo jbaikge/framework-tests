@@ -1,5 +1,5 @@
 --TEST--
-Ensure FModelManager::append attaches additional fields properly.
+Ensure FModelManager::append attaches field definitions properly.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');

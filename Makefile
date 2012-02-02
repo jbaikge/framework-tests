@@ -4,7 +4,7 @@ SUBDIRS := ${shell find ${ROOT_DIRECTORY} -mindepth 1 -type d -print | grep -v .
 
 # Single-threaded mode (default):
 .PHONY: all
-all:
+all: clean
 	pear run-tests --recur --coverage
 	php generate_coverage.php
 	find -name '*.xdebug' | xargs rm
@@ -26,3 +26,6 @@ coverage:
 	php generate_coverage.php
 	find -name '*.xdebug' | xargs rm
 
+.PHONY: clean
+clean:
+	rm -rf /tmp/framework-cache

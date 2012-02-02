@@ -11,9 +11,9 @@ require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 FObjectQuery::updateStructure();
 
-echo FObjectQuery::select('Point');
+echo FObjectQuery::select('MyBuilderClass');
 ?>
 --EXPECT--
 SELECT *
 FROM
-  v_Point
+  v_MyBuilderClass
