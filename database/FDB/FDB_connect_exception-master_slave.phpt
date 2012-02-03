@@ -2,7 +2,7 @@
 Ensure FDB::connect() tosses exceptions when in master/slave mode.
 --SKIPIF--
 <?php
-require_once(dirname(__FILE__) . '/skipif.php');
+require_once(dirname(__FILE__) . '/../skipif.php');
 ?>
 --FILE--
 <?php
@@ -15,7 +15,7 @@ $config['database.slave_user'] = 'root';
 $config['database.slave_pass'] = '';
 $config['database.name'] = 'test';
 
-require_once(dirname(__FILE__) . '/../webroot.conf.php');
+require_once(dirname(__FILE__) . '/../../webroot.conf.php');
 FDB::connect();
 ?>
 --EXPECTF--

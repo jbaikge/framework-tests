@@ -2,12 +2,12 @@
 Ensure the result returned from FDB::query()->headers() works.
 --SKIPIF--
 <?php
-require(dirname(__FILE__) . '/skipif.php');
+require(dirname(__FILE__) . '/../skipif.php');
 ?>
 --FILE--
 <?php
 define('DATABASE', 'single');
-require(dirname(__FILE__) . '/../webroot.conf.php');
+require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $result = FDB::query('SELECT 1 AS val1, 2 AS val2 UNION SELECT 3, 4');
 var_dump($result->num_rows);

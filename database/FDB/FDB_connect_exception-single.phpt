@@ -2,7 +2,7 @@
 Ensure FDB::connect() tosses exceptions when in single server mode.
 --SKIPIF--
 <?php
-require_once(dirname(__FILE__) . '/skipif.php');
+require_once(dirname(__FILE__) . '/../skipif.php');
 ?>
 --FILE--
 <?php
@@ -12,7 +12,7 @@ $config['database.user'] = 'root';
 $config['database.pass'] = '';
 $config['database.name'] = 'test';
 
-require_once(dirname(__FILE__) . '/../webroot.conf.php');
+require_once(dirname(__FILE__) . '/../../webroot.conf.php');
 FDB::connect();
 ?>
 --EXPECTF--
