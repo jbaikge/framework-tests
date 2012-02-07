@@ -29,3 +29,4 @@ coverage:
 .PHONY: clean
 clean:
 	rm -rf /tmp/framework-cache
+	rm -rf uploads/
