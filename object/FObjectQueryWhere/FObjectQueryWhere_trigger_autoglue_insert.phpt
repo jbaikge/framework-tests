@@ -1,5 +1,5 @@
 --TEST--
-Ensure FObjectQueryWhere::add properly triggers the addGlue() method when a "glue" keyword is present.
+Ensure FObjectQueryWhere::add properly appends 'AND' to the clause.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/../../database/skipif.php');
