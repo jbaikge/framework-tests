@@ -10,13 +10,8 @@ define('DATABASE', 'single');
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $where = new FObjectQueryWhere('MyWhereClass');
-$where->add('field1', 'eq', array(''));
-$where->add('and', '', array(''));
-$where->add('field2', 'eq', array(''));
+$where->add('field1', 'eq', array('good','bad'));
 var_dump((string)$where);
 ?>
---EXPECT--
-string(34) "  field1 = ''
-  AND
-  field2 = ''
-"
+--EXPECTF--
+Fatal error: Uncaught exception 'FObjectQueryMaxArgsException' with message %s

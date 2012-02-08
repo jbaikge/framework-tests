@@ -10,13 +10,12 @@ define('DATABASE', 'single');
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $where = new FObjectQueryWhere('MyWhereClass');
-$where->add('field1', 'eq', array(''));
-$where->add('and', '', array(''));
-$where->add('field2', 'eq', array(''));
+$where->add('field1', 'eq', array('good'));
+$where->add('field2', 'eq', array('bad'));
 var_dump((string)$where);
 ?>
 --EXPECT--
-string(34) "  field1 = ''
+string(41) "  field1 = 'good'
   AND
-  field2 = ''
+  field2 = 'bad'
 "
