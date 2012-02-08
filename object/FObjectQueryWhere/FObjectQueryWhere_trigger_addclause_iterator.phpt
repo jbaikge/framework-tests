@@ -1,5 +1,5 @@
 --TEST--
-Ensure FObjectQueryWhere::add properly triggers the addGlue() method when a "glue" keyword is present.
+Ensure FObjectQueryWhere::add properly triggers the autoGlue() method passing in an Iterator as an argument.
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/../../database/skipif.php');
