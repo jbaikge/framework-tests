@@ -15,10 +15,11 @@ $FOVB = new FObjectViewBuilder(new MyBuilderClass());
 $FOVB->buildViews();
 echo $FOVB->getSelectClause(true);
 ?>
---EXPECT--
+--EXPECTF--
 SELECT MyBuilderClass.object_id, 
   MyBuilderClass.object_parent_id, 
   MyBuilderClass.object_creator_id, 
   COALESCE(ap_builder_field.attribute_value, a_builder_field.attribute_value), 
+  CAST(COALESCE(ap_cast_field.attribute_value, a_cast_field.attribute_value) AS CHAR(32)), 
   MyBuilderClass.object_added, 
-  COALESCE(ap_builder_field.attribute_added, a_builder_field.attribute_added)
+  GREATEST(IFNULL(COALESCE(ap_builder_field.attribute_added, a_builder_field.attribute_added), '%s'), IFNULL(COALESCE(ap_cast_field.attribute_added, a_cast_field.attribute_added), '%s'))

@@ -24,29 +24,31 @@ array(1) {
     ["data":"FObject":private]=>
     array(%d) {
       ["id"]=>
-      string(%d) "%s"
+      string(1) "%d"
       ["parent_id"]=>
       NULL
       ["creator_id"]=>
       NULL
       ["builder_field"]=>
-      string(%d) "testing"
+      string(7) "testing"
+      ["cast_field"]=>
+      string(10) "characters"
       ["_added"]=>
-      string(%d) "%s"
+      string(19) "%s"
       ["_updated"]=>
-      string(%d) "%s"
+      string(19) "%s"
     }
     ["observers":"FObject":private]=>
     array(%d) {
       ["hooks"]=>
-      array(0) {
+      array(%d) {
       }
       ["methods"]=>
-      array(0) {
+      array(%d) {
       }
     }
     ["observerInstances":"FObject":private]=>
-    array(0) {
+    array(%d) {
     }
   }
 }

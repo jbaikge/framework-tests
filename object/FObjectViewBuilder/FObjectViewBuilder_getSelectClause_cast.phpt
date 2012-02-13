@@ -1,5 +1,5 @@
 --TEST--
-Ensure FObjectViewBuilder::getSelectClause returns the select statment portion of a query referring to the live data view table.
+Ensure FObjectViewBuilder::buildViews executes queries to build the view "tables".
 --SKIPIF--
 <?php
 require(dirname(__FILE__) . '/../../database/skipif.php');
@@ -12,7 +12,6 @@ require(dirname(__FILE__) . '/../../webroot.conf.php');
 FObjectQuery::updateStructure();
 MyBuilderClass::setup();
 $FOVB = new FObjectViewBuilder(new MyBuilderClass());
-$FOVB->buildViews();
 echo $FOVB->getSelectClause();
 ?>
 --EXPECTF--

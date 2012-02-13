@@ -8,6 +8,7 @@ all: clean
 	pear run-tests --recur --coverage
 	php generate_coverage.php
 	find -name '*.xdebug' | xargs rm
+	php clean_database.php
 
 # Multi-threaded mode:
 .PHONY: fast
@@ -25,6 +26,7 @@ $(SUBDIRS):
 coverage:
 	php generate_coverage.php
 	find -name '*.xdebug' | xargs rm
+	php clean_database.php
 
 .PHONY: clean
 clean:

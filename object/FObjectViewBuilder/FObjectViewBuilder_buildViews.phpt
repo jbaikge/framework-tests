@@ -18,15 +18,20 @@ var_dump($FOVB);
 --EXPECTF--
 object(FObjectViewBuilder)#%d (%d) {
   ["fields":"FObjectViewBuilder":private]=>
-  array(1) {
+  array(2) {
     ["builder_field"]=>
-    array(%d) {
+    array(0) {
+    }
+    ["cast_field"]=>
+    array(1) {
+      ["cast"]=>
+      string(8) "CHAR(32)"
     }
   }
   ["previewTable":"FObjectViewBuilder":private]=>
-  string(%d) "vp_MyBuilderClass"
+  string(17) "vp_MyBuilderClass"
   ["type":"FObjectViewBuilder":private]=>
-  string(%d) "MyBuilderClass"
+  string(14) "MyBuilderClass"
   ["viewTable":"FObjectViewBuilder":private]=>
-  string(%d) "v_MyBuilderClass"
+  string(16) "v_MyBuilderClass"
 }

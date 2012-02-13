@@ -20,6 +20,7 @@ This is a test upload.
 <?php
 define('DATABASE', 'single');
 require_once(dirname(__FILE__) . '/../../webroot.conf.php');
+FObjectQuery::updateStructure();
 include ('upload.php');
 
 $field = new FUploadField('test');
