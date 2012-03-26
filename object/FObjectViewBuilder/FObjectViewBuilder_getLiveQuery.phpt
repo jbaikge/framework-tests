@@ -27,7 +27,6 @@ SELECT MyBuilderClass.object_id,
   MyBuilderClass.object_added, 
   GREATEST(IFNULL(a_builder_field.attribute_added, '0000-00-00'), IFNULL(a_cast_field.attribute_added, '0000-00-00'))
 FROM objects AS MyBuilderClass
-LEFT JOIN object_caches USING(object_id)
   LEFT JOIN attributes AS a_builder_field ON (
     a_builder_field.object_id = MyBuilderClass.object_id
     AND a_builder_field.attribute_key = 'builder_field'
@@ -43,4 +42,3 @@ LEFT JOIN object_caches USING(object_id)
 WHERE
   object_deleted = 0
   AND object_type = 'MyBuilderClass'
-  AND object_caches.cache IS NOT NULL

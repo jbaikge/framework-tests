@@ -19,4 +19,3 @@ echo $FOVB->getWhereClause();
 WHERE
   object_deleted = 0
   AND object_type = 'MyBuilderClass'
-  AND object_caches.cache IS NOT NULL
