@@ -14,5 +14,5 @@ $where->add('field', 'between', array(0, 1));
 var_dump((string)$where);
 ?>
 --EXPECT--
-string(28) "  field BETWEEN '0' AND '1'
+string(24) "  field BETWEEN 0 AND 1
 "

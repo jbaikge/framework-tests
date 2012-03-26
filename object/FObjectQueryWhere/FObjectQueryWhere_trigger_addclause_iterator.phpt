@@ -38,5 +38,5 @@ $where->add('field1', 'in', array(new dumbIterator()));
 var_dump((string)$where);
 ?>
 --EXPECT--
-string(28) "  field1 IN ('1', '2', '3')
+string(22) "  field1 IN (1, 2, 3)
 "

@@ -14,5 +14,5 @@ $where->add('field', 'in', array(0, 1, 2));
 var_dump((string)$where);
 ?>
 --EXPECT--
-string(27) "  field IN ('0', '1', '2')
+string(21) "  field IN (0, 1, 2)
 "
