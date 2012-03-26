@@ -4,11 +4,15 @@ Ensure FField throws an error when specifying field definitions without an argum
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
-FField::make('test')
-	->my_options()         // _options, no args required
-		->valid_call(true) // Single arg
-		->invalid_call();  // Notice, no arg
+try {
+	FField::make('test')
+		->my_options()         // _options, no args required
+			->valid_call(true) // Single arg
+			->invalid_call();  // Notice, no arg
+	var_dump(false);
+} catch (InvalidArgumentException $iae) {
+	var_dump(true);
+}
 ?>
---EXPECTF--
-Fatal error: Must provide exactly one argument to invalid_call. in %s on line %d
-
+--EXPECT--
+bool(true)
