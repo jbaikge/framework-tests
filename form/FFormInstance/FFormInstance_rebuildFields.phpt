@@ -84,10 +84,10 @@ object(FFormInstance)#%d (5) {
           int(513)
         }
         ["template":protected]=>
-        string(98) "/home/mark/projects/code/com/framework/form/lib/framework/form/field/templates/FTextField.html.php"
+        string(%d) "%s/form/field/templates/FTextField.html.php"
       }
     }
   }
   ["template":protected]=>
-  string(87) "/home/mark/projects/code/com/framework/form/lib/framework/form/templates/FForm.html.php"
+  string(%d) "%s/form/templates/FForm.html.php"
 }

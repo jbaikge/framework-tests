@@ -33,6 +33,6 @@ array(1) {
       int(513)
     }
     ["template":protected]=>
-    string(98) "/home/mark/projects/code/com/framework/form/lib/framework/form/field/templates/FTextField.html.php"
+    string(%d) "%s/form/field/templates/FTextField.html.php"
   }
 }
