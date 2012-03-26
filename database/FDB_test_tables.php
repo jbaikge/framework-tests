@@ -13,8 +13,7 @@ FDB::query("CREATE TABLE IF NOT EXISTS `fdb_test` (
 	PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ");
 
+FDB::query("TRUNCATE fdb_test");
 FDB::query("INSERT INTO fdb_test (data) VALUES ('test 1'), ('test 2'), ('test 3')");
 
-function fdb_test_clean() {
-	FDB::query("DROP TABLE IF EXISTS fdb_test");
-}
+function fdb_test_clean() {}

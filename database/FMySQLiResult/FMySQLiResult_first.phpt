@@ -17,4 +17,4 @@ var_dump($sought->id);
 fdb_test_clean();
 ?>
 --EXPECTF--
-string(1) "%s"
+string(1) "1"
