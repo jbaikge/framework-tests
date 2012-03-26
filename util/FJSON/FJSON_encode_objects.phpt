@@ -4,6 +4,7 @@ Ensure FJSON encodes objects.
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
+$object = new stdClass();
 $object->string_value = 'string';
 $object->integer_value = 1;
 $object->array_value = array('one', 'two');

@@ -11,7 +11,7 @@ if (version_compare(PHP_VERSION, '5.4.0') >=0 ) {
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $json = '{"string_value":"string","integer_value":1,"array_value":["one","two"]}';
-var_dump(FJSON::decode($json, true, 4, 'JSON_BIGINT_AS_STRING'));
+var_dump(FJSON::decode($json, true, 4, 0));
 ?>
 --EXPECTF--
 Warning: json_decode does not support the options parameter until version 5.4.0.%s

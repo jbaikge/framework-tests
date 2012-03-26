@@ -11,7 +11,11 @@ if (version_compare(PHP_VERSION, '5.4.0') < 0) {
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $json = '{"string_value":"string","integer_value":1,"array_value":["one","two"]}';
-var_dump(FJSON::decode($json, true, 4, 'JSON_BIGINT_AS_STRING'));
+if (defined('JSON_BIGINT_AS_STRING')) {
+	var_dump(FJSON::decode($json, true, 4, JSON_BIGINT_AS_STRING));
+} else {
+	var_dump(FJSON::decode($json, true));
+}
 ?>
 --EXPECT--
 array(3) {
