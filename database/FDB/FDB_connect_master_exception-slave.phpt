@@ -17,7 +17,7 @@ $config['database.name'] = 'test';
 
 require_once(dirname(__FILE__) . '/../../webroot.conf.php');
 try {
-	FDB::connect();
+	@FDB::connect();
 	var_dump(false);
 } catch (Exception $e) {
 	var_dump(true);
