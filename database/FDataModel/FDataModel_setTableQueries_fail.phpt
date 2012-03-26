@@ -3,7 +3,12 @@ Ensure FDataModel::setTableQueries fails with bad values.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
-FDataModel::setTableQueries('test', 'fail');
+try {
+	FDataModel::setTableQueries('test');
+	var_dump(false);
+} catch (Exception $e) {
+	var_dump(true);
+}
 ?>
---EXPECTF--
-Warning: Invalid argument supplied for foreach() in %s
+--EXPECT--
+bool(true)
