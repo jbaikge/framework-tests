@@ -10,7 +10,7 @@ define('DATABASE', 'single');
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 
 $result = FDB::query('SELECT 1 AS val1, 2 AS val2 UNION SELECT 3, 4');
-var_dump($result->num_rows);
+var_dump(count($result));
 
 // Row Headers
 var_dump($result->asRow()->headers());

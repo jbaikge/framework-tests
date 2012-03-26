@@ -16,9 +16,12 @@ $config['database.slave_pass'] = '';
 $config['database.name'] = 'test';
 
 require_once(dirname(__FILE__) . '/../../webroot.conf.php');
-FDB::connect();
+try {
+	FDB::connect();
+	var_dump(false);
+} catch (Exception $e) {
+	var_dump(true);
+}
 ?>
---EXPECTF--
-Warning: mysqli::mysqli(): (HY000/2003): Can't connect to MySQL server on %s
-
-Fatal error: Uncaught exception 'Exception' with message 'Could not connect to slave database:%s
+--EXPECT--
+bool(true)

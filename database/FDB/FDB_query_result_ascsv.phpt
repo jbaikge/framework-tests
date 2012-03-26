@@ -9,7 +9,7 @@ require(dirname(__FILE__) . '/../skipif.php');
 define('DATABASE', 'single');
 require(dirname(__FILE__) . '/../../webroot.conf.php');
 $result = FDB::query('SELECT 1 AS val1, 2 AS val2 UNION SELECT 3, 4');
-var_dump($result->num_rows);
+var_dump(count($result));
 
 // Default row type: Object
 foreach ($result as $row => $data) {
@@ -25,14 +25,14 @@ foreach ($result->asCSV() as $row => $data) {
 --EXPECTF--
 int(2)
 int(0)
-object(stdClass)#4 (2) {
+object(stdClass)#%d (2) {
   ["val1"]=>
   string(1) "1"
   ["val2"]=>
   string(1) "2"
 }
 int(1)
-object(stdClass)#5 (2) {
+object(stdClass)#%d (2) {
   ["val1"]=>
   string(1) "3"
   ["val2"]=>
