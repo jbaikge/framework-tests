@@ -16,5 +16,5 @@ FDB::query("CREATE TABLE IF NOT EXISTS `fdb_test` (
 FDB::query("INSERT INTO fdb_test (data) VALUES ('test 1'), ('test 2'), ('test 3')");
 
 function fdb_test_clean() {
-	FDB::query("DROP TABLE IF EXISTS fdb_tests");
+	FDB::query("DROP TABLE IF EXISTS fdb_test");
 }
