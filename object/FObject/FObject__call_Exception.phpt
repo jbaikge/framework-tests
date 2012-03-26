@@ -8,7 +8,12 @@ class MyObject extends FObject {
 	public static function getModel() {}
 }
 $obj = new MyObject();
-var_dump($obj->bogus_method());
+try {
+	$obj->bogus_method();
+	var_dump(false);
+} catch (Exception $e) {
+	var_dump(true);
+}
 ?>
---EXPECTF--
-Fatal error: Call to undefined method MyObject::bogus_method()%s
+--EXPECT--
+bool(true)
