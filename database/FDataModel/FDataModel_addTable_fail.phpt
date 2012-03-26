@@ -3,12 +3,7 @@ Ensure FDataModel::addTable fails with bad values.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
-try {
-	FDataModel::addTable('test', 'fail');
-	var_dump(false);
-} catch (Exception $e) {
-	var_dump(true);
-}
+FDataModel::addTable('test', 'fail');
 ?>
---EXPECT--
-bool(true)
+--EXPECTF--
+Catchable fatal error: Argument 2 passed to FDataModel::addTable() must be of the type array, string given%s

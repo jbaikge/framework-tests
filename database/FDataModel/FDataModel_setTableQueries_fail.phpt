@@ -3,12 +3,7 @@ Ensure FDataModel::setTableQueries fails with bad values.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
-try {
-	FDataModel::setTableQueries('test');
-	var_dump(false);
-} catch (Exception $e) {
-	var_dump(true);
-}
+FDataModel::setTableQueries('test');
 ?>
---EXPECT--
-bool(true)
+--EXPECTF--
+Catchable fatal error: Argument 1 passed to FDataModel::setTableQueries() must be of the type array, string given%s
