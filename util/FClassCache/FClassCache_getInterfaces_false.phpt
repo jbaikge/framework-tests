@@ -1,5 +1,5 @@
 --TEST--
-Ensure FClassCache::getInterfaces returns false for classes that do not implement interfaces.
+Ensure FClassCache::getInterfaces returns an empty array (false) for classes that do not implement interfaces.
 --FILE--
 <?php
 require(dirname(__FILE__) . '/../../webroot.conf.php');
@@ -10,4 +10,5 @@ var_dump(FClassCache::getInterfaces('FCalendarEvent'));
 FClassCache::clear();
 ?>
 --EXPECT--
-bool(false)
+array(0) {
+}
