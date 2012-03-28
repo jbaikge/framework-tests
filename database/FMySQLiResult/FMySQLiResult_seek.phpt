@@ -19,4 +19,4 @@ fdb_test_clean();
 ?>
 --EXPECT--
 string(1) "1"
-string(1) "3"
+string(1) "2"

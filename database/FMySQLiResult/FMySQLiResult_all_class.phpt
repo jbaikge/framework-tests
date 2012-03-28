@@ -15,8 +15,7 @@ class MyClass {
 		list($this->id, $this->data) = array_values($data);
 	}
 }
-
-var_dump(FDB::query("SELECT id, data FROM fdb_test ORDER BY id")->asClass('MyClass')->all());
+var_dump($test = FDB::query("SELECT id, data FROM fdb_test ORDER BY id")->asClass('MyClass')->all());
 
 ?>
 --EXPECTF--
